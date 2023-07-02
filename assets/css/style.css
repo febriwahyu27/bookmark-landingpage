@@ -1,0 +1,840 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'rubik';
+    font-weight: 400;
+}
+.active{
+    color: black;
+    border-bottom: 4px solid hsl(0, 94%, 66%);
+}
+.list-down{
+    padding: 0 0 94px 0;
+}
+
+color{
+    color: hsl(229, 8%, 60%);
+    color: hsl(229, 31%, 21%);
+}
+
+/********** NAVBAR **********/
+nav{
+    padding: 13px 100px;
+}
+nav img{
+    padding: 5px 0;
+}
+nav ul{
+    float: right;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    padding: 5px 0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    color: black;
+    font-family: 'rubik';
+    font-weight: 400;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+nav ul li a#login{
+    padding: 8px 25px;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    font-family: 'rubik';
+    font-weight: 400;
+    background-color: hsl(0, 94%, 66%);
+}
+nav ul li a#login:hover{
+    color: hsl(0, 94%, 66%);
+    background-color: white;
+    border: 1px solid hsl(0, 94%, 66%);
+}
+nav img#humburger{
+    display: none;
+}
+/********** END **********/
+
+@media screen and (max-width: 950px){
+    nav{
+        width: 100% !important;
+        padding: 10px 40px;
+    }
+    nav ul{
+        display: none;
+    }
+    nav img#humburger{
+        float: right;
+        display: block;
+        margin: 5px 0 0 0;
+    }
+}
+
+/********** NAVBAR SIDE **********/
+.navbar-side{
+    display: none;
+}
+/********** END **********/
+@media screen and (max-width: 950px){
+    .navbar-side{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        height: 100vh;
+        padding: 0 50px;
+        background-color: #373770e0;
+    }
+    .navbar-side .head{
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 0;
+        border-bottom: 1px solid hsl(229, 8%, 60%);
+    }
+    .navbar-side .head svg:nth-child(2){
+        margin: 2.5px 0 0 0;
+    }
+    .navbar-side ul li{
+        text-align: center;
+        list-style: none;
+        padding: 15px 0;
+        border-bottom: 1px solid hsl(229, 8%, 60%);
+    }
+    .navbar-side ul li.btn-login{
+        border: 3px solid white;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    .navbar-side ul li a{
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .navbar-side .footer{
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar-side .footer svg{
+        margin: 0 10px;
+    }
+}
+
+
+/********** SECTION A **********/
+.section-a{
+    position: relative;
+    display: flex;
+    margin: 60px 0;
+}
+.section-a .caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+}
+.section-a .caption h1{
+    font-size: 3em;
+    font-weight: 600;
+}
+.section-a .caption p{
+    margin: 15px 0;
+    font-size: 18px;
+    color: grey;
+}
+.section-a .caption .button{
+    padding: 12px 0;
+}
+.section-a .caption .button a{
+    padding: 12px 15px;
+    text-decoration: none;
+    font-family: 'rubik';
+    border-radius: 5px;
+}
+.section-a .caption .button .get-chrome{
+    margin: 0 10px 0 0;
+    color: white;
+    background-color: hsl(231, 69%, 60%);
+}
+.section-a .caption .button .get-chrome:hover{
+    background-color: white;
+    color: hsl(231, 69%, 60%);
+    border: 1px solid hsl(231, 69%, 60%);
+}
+.section-a .caption .button .get-firefox{
+    margin: 0 10px 0 0;
+    color: black;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: hsla(229, 8%, 60%, 0.308);
+}
+.section-a .caption .button .get-firefox:hover{
+    background-color: white;
+    color: hsl(229, 31%, 21%);
+    border: 1px solid hsl(229, 31%, 21%);
+}
+.section-a .background{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 35%;
+    height: 300px;
+    z-index: -1;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    background-color: hsl(231, 69%, 60%);
+}
+.section-a img{
+    padding: 0 20px 0 0;
+}
+
+@media screen and ( max-width: 950px ){
+    .section-a{
+        position: relative;
+        display: grid;
+        grid-template-areas: 
+        'img img img img img img'
+        'backgrounds backgrounds backgrounds backgrounds backgrounds backgrounds'
+        'caption caption caption caption caption caption';
+        margin: 20px 0;
+    }
+    .section-a .caption{
+        grid-area: caption;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 40px;
+        width: 100%;
+        margin: 60px 0;
+    }
+    .section-a .caption h1{
+        font-size: 2em;
+        font-weight: 600;
+    }
+    .section-a .caption p{
+        margin: 25px 0;
+        font-size: 16px;
+        color: hsl(229, 8%, 60%);
+        width: 100%;
+    }
+    .section-a img{
+        grid-area: img;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+    .section-a .background{
+        grid-area: backgrounds;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 85%;
+        height: 300px;
+        z-index: -1;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+        background-color: hsl(231, 69%, 60%);
+    }
+    .section-a .caption .button .get-chrome{
+        margin: 0 10px 0 0;
+        color: white;
+        background-color: hsl(231, 69%, 60%);
+    }
+    .section-a .caption .button .get-firefox{
+        color: black;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: hsla(229, 8%, 60%, 0.308);
+    }
+}
+
+/********** FEATURES **********/
+section .features{
+    overflow: hidden;
+}
+section .features h1.judul{
+    text-align: center;
+    font-weight: 500;
+}
+section .features p{
+    text-align: center;
+    color: hsl(229, 8%, 60%);
+    width: 35%;
+    margin: 20px auto;
+}
+section .features ul{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+    border-bottom: 1px solid grey;
+}
+section .features ul li{
+    list-style: none;
+    padding: 20px 20px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    color: grey;
+}
+section .features ul li.active span{
+    color: black;
+}
+section .features ul li:hover{
+    cursor: pointer;
+    color: hsl(0, 94%, 66%);
+}
+section .features .slider{
+    display: flex;
+    width: 100%;
+}
+section .features .slider > div{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 55px 60px 100px;
+}
+section .features .slider img{
+    width: 657px;
+    height: 400px;
+}
+section .features .slider .caption-tab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 50%; */
+    width: 37%;
+}
+section .features .slider .caption-tab h1{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: left;
+    width: 100%;
+}
+section .features .slider .caption-tab p{
+    text-align: left;
+    margin: 25px 0;
+    /* width: 67%; */
+    width: 100%;
+    font-size: 18px;
+}
+section .features .slider .caption-tab a{
+    padding: 10px 0;
+    width: 25%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(231, 69%, 60%);
+}
+section .features .slider .background-slide{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35%;
+    height: 340px;
+    z-index: -1;
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    background-color: hsl(231, 69%, 60%);
+}
+/********** END **********/
+
+@media screen and ( max-width: 950px ){
+    section .features{
+        overflow: hidden;
+        margin: 50px 0 0 0;
+        width: 100%;
+    }
+    section .features h1.judul{
+        text-align: center;
+        font-weight: 500;
+        border: 1px solid green;
+    }
+    section .features p{
+        text-align: center;
+        color: hsl(229, 8%, 60%);
+        width: 70%;
+        margin: 20px auto;
+    }
+    section .features ul{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        margin: 50px auto;
+    }
+    section .features ul li{
+        list-style: none;
+        padding: 20px 20px;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-left: none;
+        color: hsl(229, 8%, 60%);
+        border: 1px solid hsl(229, 8%, 60%);
+    }
+    section .features ul li:nth-child(1){
+        border-bottom: none;
+        border-right: none;
+        border-left: none;
+    }
+    section .features ul li:nth-child(2){
+        border-bottom: none;
+        border-right: none;
+        border-left: none;
+    }
+    section .features ul li:nth-child(3){
+        border-bottom: none;
+        border-right: none;
+        border-left: none;
+    }
+    section .features .slider > div{
+        position: relative;
+        display: grid;
+        grid-template-areas: 
+        'img img img img img img'
+        'backgrounds backgrounds backgrounds backgrounds backgrounds backgrounds'
+        'caption caption caption caption caption caption';
+        width: 100%;
+        padding: 60px 20px 60px 0;
+    }
+    section .features .slider img{
+        grid-area: img;
+        height: 400px;
+        width: 100%;
+        padding-left: 20px;
+    }
+    section .features .slider .background-slide{
+        grid-area: backgroundSlid;
+        position: none;
+        bottom: 40%;
+        left: 0;
+        width: 85%;
+        height: 340px;
+        z-index: -1;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        background-color: hsl(231, 69%, 60%);
+    }
+    section .features .slider .caption-tab{
+        grid-area: caption;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100% !important;
+        margin: 150px 0 0 0;
+        padding: 0 40px;
+    }
+    section .features .slider .caption-tab h1{
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+        width: 100%;
+    }
+    section .features .slider .caption-tab p{
+        text-align: center;
+        margin: 25px auto;
+        width: 70%;
+        font-size: 16px;
+    }
+    section .features .slider .caption-tab a{
+        display: none;
+        padding: 10px 0;
+        width: 25%;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        color: white;
+        margin: 0 auto;
+        background-color: hsl(231, 69%, 60%);
+    }
+}
+
+/********** EXTENSION **********/
+.extension{
+    margin: 50px 0;
+}
+.extension h1{
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.extension p{
+    text-align: center;
+    margin: 0 auto;
+    width: 36%;
+    color: hsl(229, 8%, 60%);
+}
+.extension .card-ext{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 200px;
+    margin: 50px 0 0 0;
+    height: 500px;
+}
+.extension .card{
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 10px;
+    height: 350px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;;
+}
+.extension .card-ext .card:nth-child(2n){
+    margin-top: 40px;
+}
+.extension .card-ext .card:nth-child(3n){
+    margin-top: 80px;
+}
+.extension .card h2{
+    margin: 20px 0 0 0;
+}
+.extension .card p{
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+.extension .card #img-dots{
+    margin: 30px 0;
+}
+.extension .card a{
+    text-decoration: none;
+    padding: 10px 25px;
+    color: white;
+    border-radius: 5px;
+    background-color: hsl(231, 69%, 60%);
+}
+.extension .card a:hover{
+    background-color: white;
+    color: hsl(231, 69%, 60%);
+    border: 2px solid hsl(231, 69%, 60%);
+}
+/********** END **********/
+
+@media screen and ( max-width: 950px ){
+    .extension{
+        margin: 100px 0;
+    }
+    .extension h1{
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+    .extension p{
+        text-align: center;
+        margin: 0 auto;
+        width: 70%;
+        font-size: 17px;
+        color: hsl(229, 8%, 60%);
+    }
+    .extension .card-ext{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 0 100px;
+        margin: 20px 0 0 0;
+        height: auto;
+    }
+    .extension .card{
+        text-align: center;
+        padding: 40px 0;
+        border-radius: 10px;
+        width: 100%;
+        margin: 20px 0;
+        height: auto;
+        border: 1px solid green;
+    }
+    .extension .card-ext .card:nth-child(2n){
+        margin-top: 0;
+    }
+    .extension .card-ext .card:nth-child(3n){
+        margin-top: 0;
+    }
+    .extension .card a{
+        text-decoration: none;
+        padding: 10px 25px;
+        color: white;
+        border-radius: 5px;
+        background-color: hsl(231, 69%, 60%);
+    }
+}
+
+/********** FREQUENTLY **********/
+section .frequently{
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+section .frequently h1{
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+section .frequently p{
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    font-size: 16px;
+    color: hsl(229, 8%, 60%);
+}
+section .frequently .list{
+    width: 45%;
+    margin: 40px auto 50px auto;
+}
+section .frequently .list .answer{
+    display: none;
+}
+section .frequently .list .faq.open-answer .answer{
+    display: block;
+}
+section .frequently .list .faq.open-answer svg{
+    rotate: 180deg;
+    transition: .5s;
+}
+section .frequently .list .faq.open-answer svg path{
+    stroke: red;
+}
+section .frequently .list .faq{
+    position: relative;
+    text-align: left;
+    padding: 15px 0;
+    border-bottom: 1px solid grey;
+}
+section .frequently .list .faq:hover{
+    cursor: pointer;
+}
+section .frequently .list .faq:hover a{
+    color: hsl(0, 94%, 66%);
+}
+section .frequently .list .faq a{
+    color: black;
+    font-size: 18px;
+    text-decoration: none;
+}
+section .frequently ul li h6{
+    width: 100%;
+    color: black;
+}
+section .frequently .list .faq svg{
+    float: right;
+    margin: 5px 20px 0 0;
+    rotate: 360deg;
+    transition: .5s;
+}
+section .frequently .faq .answer p{
+    text-align: justify;
+    margin: 13px 0 10px 0;
+    width: 100%;
+    padding: 0 40px 0 0;
+    
+}
+section .frequently a#more-info{
+    text-align: center;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: hsl(231, 69%, 60%);
+}
+/********** END **********/
+
+@media screen and ( max-width: 950px ){
+    section .frequently{
+        text-align: center;
+        margin: 100px 0 50px 0;
+    }
+    section .frequently h1{
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        margin: 0 0 20px 0;
+    }
+    section .frequently p{
+        text-align: center;
+        margin: 0 auto;
+        width: 70%;
+        font-size: 18px;
+        color: hsl(229, 8%, 60%);
+    }
+    section .frequently ul{
+        width: 70%;
+        margin: 40px auto 50px auto;
+    }
+}
+
+/********** CONTACT **********/
+section .contact{
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+    background-color: hsl(231, 69%, 60%);
+}
+section .contact p{
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+section .contact h1{
+    font-size: 2em;
+    font-weight: 700;
+    width: 35%;
+    margin: 50px auto;
+}
+section .contact form{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+section .contact form .box{
+    padding: 3px 3px 0 3px;
+    border-radius: 5px;
+    background-color: hsl(231, 69%, 60%);
+}
+section .contact form .box input{
+    height: 40px;
+    width: 350px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+}
+section .contact form .box p{
+    display: none;
+    text-align: left;
+    font-size: 12px;
+    text-transform: lowercase;
+    font-style: italic;
+    padding: 4px 10px;
+}
+section .contact form button{
+    height: 40px;
+    padding: 0 10px;
+    color: white;
+    border: none;
+    margin: 0 0 0 10px;
+    border-radius: 5px;
+    background-color: hsl(0, 94%, 66%);
+}
+section .contact form button:hover{
+    cursor: pointer;
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+    border: 1px solid hsl(0, 94%, 66%);
+}
+/********** END **********/
+
+@media screen and ( max-width: 950px ){
+    section .contact h1{
+        font-size: 1.5em;
+        font-weight: 700;
+        width: 70%;
+        margin: 20px auto;
+    }
+    section .contact form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        margin: 20px auto 0 auto;
+        height: 90px;
+    }
+    section .contact form input{
+        height: 40px;
+        width: 100%;
+        padding: 0 10px;
+        border-radius: 5px;
+        border: none;
+    }
+    section .contact form button{
+        height: 40px;
+        width: 100%;
+        padding: 0 10px;
+        color: white;
+        border: none;
+        margin: 0 0 0 0;
+        border-radius: 5px;
+        background-color: hsl(0, 94%, 66%);
+    }
+}
+
+/********** MENU **********/
+section .menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 100px;
+    background-color: hsl(229, 31%, 21%);
+}
+section .menu ul{
+    display: flex;
+}
+section .menu ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+}
+section .menu ul li img{
+    margin: 0 40px 0 0;
+    color: white;
+}
+section .menu ul li.link a{
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+}
+section .menu > ul li a:hover{
+    color: hsl(0, 94%, 66%);
+}
+section .menu ul li img:hover{
+    color: hsl(0, 94%, 66%);
+}
+/********** END **********/
+
+@media screen and ( max-width: 950px ){
+    section .menu{
+        display: flex;
+        flex-direction: column;
+        padding: 15px 100px;
+        background-color: hsl(229, 31%, 21%);
+    }
+    section .menu ul:nth-child(1){
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 0;
+        height: 200px;
+    }
+    section .menu ul:nth-child(2){
+        justify-content: space-between;
+        width: 25%;
+        margin: 20px auto 0 auto;
+    }
+    section .menu ul li img{
+        margin: 0 0 0 0;
+        color: white;
+    }
+}
+
+/********** FOOTER **********/
+footer{
+    padding: 10px 0;
+    background-color: #ACBCFF;
+}
+/********** END **********/
+

@@ -1,0 +1,6 @@
+list.forEach(function(el){
+    el.addEventListener("click", function(e){
+        e.target.parentElement.style.padding = "15px 0 94px 0";
+        e.target.style.rotate = "180deg";
+    })
+})
